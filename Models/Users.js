@@ -1,5 +1,5 @@
-const MONGOOSE          = require('../config/mongo');
-const MODEL             = require('../models/model');
+const MONGOOSE          = require('../Config/mongo');
+const MODEL             = require('../Models/User');
 const Schema            = MONGOOSE.Schema;
 
 const schema    = new Schema
