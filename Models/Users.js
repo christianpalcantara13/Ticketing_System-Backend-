@@ -19,11 +19,11 @@ const schema    = new Schema
     timestamps :    { createdAt   : 'created_at', updatedAt   : 'updated_at' }
 });
 
-module.exports = class db_user extends MODEL
+module.exports = class db_Users extends MODEL
 {
     constructor ()
     {
-        super('db_users', schema);
+        super('db_Users', schema);
         this.response_fields    = ['full_name', 'email', 'username'];
     }
 
