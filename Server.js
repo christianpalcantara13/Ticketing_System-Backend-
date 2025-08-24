@@ -1,16 +1,16 @@
-const express = require('express');
-const app = express();
-let bodyParser = require('body-parser');
-let port = process.env.backend_port;
-
 require('dotenv').config();
 
-//------------------------------routes----------------------------------------//
+const express = require('express');
+const app = express();
+const mongoose = require('./mongo')
 
-app.get('/',(req,res)=>{
-    res.send('this is working')
-})
+const port = process.env.BACKEND_PORT;
+console.log(' Database connection state', mongoose.connection.readyState)
 
-app.listen(port,()=>{
-console.log("app is running on port");
-})
+app.get('/', (req, res) => {
+  console.log(`App is running on port ${port}`);
+  res.send("Server is working");
+ 
+});
+
+app.listen(port);
